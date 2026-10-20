@@ -1,0 +1,24 @@
+---
+const parts = [
+  ['Premiere panel', 'CEP 11 + ExtendScript. Reads the timeline each second, sends what changed, applies what your partner sent.'],
+  ['Sync engine', 'Plain JavaScript with no Premiere calls, tested on its own with node --test.'],
+  ['Relay', 'Node.js + ws on the host laptop. Numbers every edit; the higher revision wins.'],
+  ['Live cursor', 'A PowerShell helper draws a click-through overlay with your partner\'s pointer and name.'],
+];
+---
+
+<section id="how">
+  <h2 class="mb-8 text-3xl font-bold">How it works</h2>
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    {parts.map(([title, text], i) => (
+      <div class="card border-base-300 border">
+        <div class="card-body">
+          <span class="text-primary text-sm font-bold">0{i + 1}</span>
+          <h3 class="card-title">{title}</h3>
+          <p class="text-sm">{text}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+  <p class="mt-6">Laptops connect over <strong>Tailscale</strong>, so it works on any network with internet. If two edits touch the same field, the latest numbered edit wins on both machines.</p>
+</section>

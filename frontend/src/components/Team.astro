@@ -1,0 +1,30 @@
+---
+// From each member's Devpost profile. TODO: add role, graduation date, internship interest, dream job.
+const team = [
+  { name: 'Caleb Nwasike', where: 'Kennesaw, GA', skills: ['Java', 'Python', 'R', 'SQL', 'Shell'], links: [['LinkedIn', 'https://www.linkedin.com/in/caleb-nwasike/']] },
+  { name: 'Glenn Freeman', where: 'Lithia Springs, GA', skills: ['Python', 'HTML5', 'CSS3', 'Tailwind', 'Astro'], links: [['GitHub', 'https://github.com/GlennFreeman'], ['LinkedIn', 'https://www.linkedin.com/in/glennjlfreeman/']] },
+  { name: 'Bradley Crasto', where: 'Atlanta, GA', skills: ['Web'], links: [['GitHub', 'https://github.com/skearya'], ['Website', 'https://skeary.me/']] },
+  { name: 'Jake Cashion', where: 'Atlanta, GA', skills: ['Java', 'JavaScript', 'React', 'Vue', 'Node.js'], other: 'GroundCheck', links: [['GitHub', 'https://github.com/jakecashion']] },
+];
+---
+
+<section id="team">
+  <h2 class="mb-8 text-3xl font-bold">The team</h2>
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    {team.map((m) => (
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title">{m.name}</h3>
+          <p class="text-sm opacity-70">{m.where}</p>
+          <div class="flex flex-wrap gap-1">
+            {m.skills.map((k) => <span class="badge badge-outline badge-sm">{k}</span>)}
+          </div>
+          {m.other && <p class="text-sm">Also built: {m.other}</p>}
+          <div class="card-actions mt-2 flex-wrap">
+            {m.links.map(([label, href]) => <a class="link link-primary text-sm" href={href} target="_blank" rel="noopener">{label}</a>)}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

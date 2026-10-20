@@ -1,0 +1,18 @@
+---
+const steps = [
+  'Run install.ps1 on each laptop, then restart Premiere.',
+  'Open the panel: Window > Extensions > Tandem.',
+  'Connect the laptops with Tailscale.',
+  'Host: start the relay, then click Host in the panel.',
+  'Guest: enter the host\'s address and your name, then click Connect.',
+];
+---
+
+<section id="try">
+  <h2 class="mb-8 text-3xl font-bold">Try it</h2>
+  <p class="mb-4">You need two Windows laptops with Premiere Pro 22.3.1, and Node.js on the host.</p>
+  <ul class="steps steps-vertical">
+    {steps.map((s) => <li class="step step-primary">{s}</li>)}
+  </ul>
+  <p class="mt-6">Edit something. Your partner's Premiere changes within about a second.</p>
+</section>

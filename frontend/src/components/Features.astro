@@ -1,0 +1,25 @@
+---
+const features = [
+  ['Join in seconds', 'The host starts a session. The guest types the host\'s address and a name, then clicks Connect. Both editors now work on one cut.'],
+  ['Every movement control, live', 'Position, Scale, Rotation, Anchor Point and Opacity sync in about a second, both directions.'],
+  ['The timeline itself, live', 'Rename, trim and move clips. Your partner\'s timeline follows each change.'],
+  ['See where your partner works', 'Your partner\'s pointer and name are drawn live over your own Premiere window.'],
+  ['Know who changed what', 'A change feed lists each edit with its author: "Bradley set Hero Rotation to 90 (rev 7)".'],
+  ['No broken timelines', 'If both editors change the same value at once, both machines settle on the same result.'],
+];
+---
+
+<section id="features">
+  <h2 class="mb-8 text-3xl font-bold">What it does</h2>
+  <p class="mb-8 max-w-2xl">Multiple editors open one live session and edit the same timeline together. Nobody locks, nobody waits, nobody merges.</p>
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {features.map(([title, text]) => (
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title">{title}</h3>
+          <p>{text}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
