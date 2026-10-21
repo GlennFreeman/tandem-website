@@ -1,14 +1,22 @@
 ---
+import { Image } from "astro:assets";
+import caleb from "../assets/caleb nwasike.jpg";
+import glenn from "../assets/glenn_freeman.png";
+import bradley from "../assets/bradley_crasto.jpg";
+import jake from "../assets/jake_cashion.jpg";
+
 // From each member's Devpost profile. TODO: add role, graduation date, internship interest, dream job.
 const team = [
   {
     name: "Caleb Nwasike",
+    photo: caleb,
     where: "Kennesaw, GA",
     skills: ["Java", "Python", "R", "SQL", "Shell"],
     links: [["LinkedIn", "https://www.linkedin.com/in/caleb-nwasike/"]],
   },
   {
     name: "Glenn Freeman",
+    photo: glenn,
     where: "Lithia Springs, GA",
     skills: ["Python", "HTML5", "CSS3", "Tailwind", "Astro"],
     links: [
@@ -18,6 +26,7 @@ const team = [
   },
   {
     name: "Bradley Crasto",
+    photo: bradley,
     where: "Atlanta, GA",
     skills: ["Web"],
     links: [
@@ -27,6 +36,7 @@ const team = [
   },
   {
     name: "Jake Cashion",
+    photo: jake,
     where: "Atlanta, GA",
     skills: ["Java", "JavaScript", "React", "Vue", "Node.js"],
     other: "GroundCheck",
@@ -42,6 +52,13 @@ const team = [
       team.map((m) => (
         <li class="card bg-base-200">
           <div class="card-body">
+            <Image
+              src={m.photo}
+              alt=""
+              width={192}
+              height={192}
+              class="size-24 rounded-full object-cover"
+            />
             <h3 class="card-title">{m.name}</h3>
             <p class="text-sm opacity-70">{m.where}</p>
             <div class="flex flex-wrap gap-1">
