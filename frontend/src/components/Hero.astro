@@ -1,18 +1,37 @@
 ---
-import { Image } from 'astro:assets';
-import tandem from '../assets/tandem logo crop.png';
+import { Image } from "astro:assets";
+import tandem from "../assets/tandem logo crop.png";
 ---
 
-<header class="hero relative min-h-[70vh] overflow-hidden py-12 bg-gradient-to-b from-base-200 to-base-100">
-  <Image src={tandem} alt="Two Premiere Pro windows, each showing the other editor's live cursor" class="absolute inset-0 h-full w-full object-cover" />
+<header
+  class="hero relative min-h-[70vh] overflow-hidden py-12 bg-linear-to-b from-base-200 to-base-100"
+>
+  <Image
+    src={tandem}
+    alt="Two Premiere Pro windows, each showing the other editor's live cursor"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
   <div class="hero-content relative text-center">
-    <div class="max-w-3xl rounded-box bg-black/50 p-8 text-white shadow-xl backdrop-blur-md sm:p-12">
-      <div class="badge badge-primary mb-4">Hacklanta · Creative track · C-Day @ KSU</div>
-      <h1 class="text-5xl font-bold sm:text-6xl">Premiere Pro, <span class="text-primary">multiplayer</span>.</h1>
-      <p class="py-6 text-lg">Edit the same timeline, at the same time, from different computers. Like Google Docs for your timeline.</p>
+    <div
+      class="max-w-3xl rounded-box bg-black/50 p-8 text-white shadow-xl backdrop-blur-md sm:p-12"
+    >
+      <div class="badge badge-primary mb-4">
+        Hacklanta · Creative track · C-Day @ KSU
+      </div>
+      <h1 class="text-5xl font-bold sm:text-6xl">
+        Premiere Pro, <span class="text-primary">multiplayer</span>.
+      </h1>
+      <p class="py-6 text-lg">
+        Edit the same timeline, at the same time, from different computers. Like
+        Google Docs for your timeline.
+      </p>
       <div class="flex flex-wrap justify-center gap-3">
         <a href="#try" class="btn btn-primary">Try it</a>
-        <a href="#features" class="btn btn-outline border-white text-white hover:bg-white hover:text-black">What it does</a>
+        <a
+          href="#features"
+          class="btn btn-outline border-white text-white hover:bg-white hover:text-black"
+          >What it does</a
+        >
       </div>
     </div>
   </div>

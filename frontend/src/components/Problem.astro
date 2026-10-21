@@ -2,19 +2,41 @@
   <h2 class="mb-8 text-3xl font-bold">Why we built it</h2>
   <div class="grid gap-8 md:grid-cols-2">
     <div class="space-y-4">
-      <p>Almost no film is cut by one person, and more teams work from different cities. Yet every pro editing tool treats the timeline as a one-person space.</p>
-      <blockquote class="border-primary border-l-4 pl-4 italic">"It's not currently possible for more than one editor to make changes on the same timeline." <span class="not-italic opacity-70">: Adobe staff, 2017. Still true.</span></blockquote>
-      <p>Writers got Google Docs. Designers got Figma. Developers got live pair programming. Film editors are still waiting for their turn.</p>
+      <p>
+        Almost no film is cut by one person, and more teams work from different
+        cities. Yet every pro editing tool treats the timeline as a one-person
+        space.
+      </p>
+      <blockquote class="border-primary border-l-4 pl-4 italic">
+        "It's not currently possible for more than one editor to make changes on
+        the same timeline." <span class="not-italic opacity-70"
+          >: Adobe staff, 2017. Still true.</span
+        >
+      </blockquote>
+      <p>
+        Writers got Google Docs. Designers got Figma. Developers got live pair
+        programming. Film editors are still waiting for their turn.
+      </p>
     </div>
     <ul class="timeline timeline-vertical timeline-compact">
-      {['Save the project file', 'Zip and upload', 'Message your partner', 'Download and relink media', 'Open it. Now they wait.'].map((s, i, a) => (
-        <li>
-          {i > 0 && <hr />}
-          <div class="timeline-middle"><div class="badge badge-error badge-xs"></div></div>
-          <div class="timeline-end timeline-box">{s}</div>
-          {i < a.length - 1 && <hr />}
-        </li>
-      ))}
+      {
+        [
+          "Save the project file",
+          "Zip and upload",
+          "Message your partner",
+          "Download and relink media",
+          "Open it. Now they wait.",
+        ].map((s, i, a) => (
+          <li>
+            {i > 0 && <hr />}
+            <div class="timeline-middle">
+              <div class="badge badge-error badge-xs" />
+            </div>
+            <div class="timeline-end timeline-box">{s}</div>
+            {i < a.length - 1 && <hr />}
+          </li>
+        ))
+      }
     </ul>
   </div>
 </section>
