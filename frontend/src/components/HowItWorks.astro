@@ -6,11 +6,11 @@ const parts = [
   ],
   [
     "Sync engine",
-    "Plain JavaScript with no Premiere calls, tested on its own with node --test.",
+    "Plain JavaScript with no Premiere calls, tested on its own with <kbd class='kbd kbd-sm'>node --test</kbd>.",
   ],
   [
     "Relay",
-    "Node.js + ws on the host laptop. Numbers every edit; the higher revision wins.",
+    "Node.js + <kbd class='kbd kbd-sm'>ws</kbd> on the host laptop. Numbers every edit; the higher revision wins.",
   ],
   [
     "Live cursor",
@@ -28,7 +28,7 @@ const parts = [
           <div class="card-body">
             <span class="text-primary text-sm font-bold" aria-hidden="true">0{i + 1}</span>
             <h3 class="card-title">{title}</h3>
-            <p class="text-sm">{text}</p>
+            <p class="text-sm" set:html={text} />
           </div>
         </li>
       ))
