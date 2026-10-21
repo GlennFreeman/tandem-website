@@ -11,8 +11,7 @@ const steps = [
 <section id="try" aria-labelledby="try-title">
   <h2 id="try-title" class="mb-8 text-3xl font-bold">Try it</h2>
   <p class="mb-4">
-    You need two Windows laptops with Premiere Pro 22.3.1, and Node.js on the
-    host.
+    You need two Windows laptops with Premiere Pro, and Node.js on the host.
   </p>
   <ol class="steps steps-vertical">
     {steps.map((s) => <li class="step step-primary">{s}</li>)}
@@ -20,4 +19,25 @@ const steps = [
   <p class="mt-6">
     Edit something. Your partner's Premiere changes within about a second.
   </p>
+  <a
+    class="btn btn-outline btn-sm mt-6"
+    href="https://github.com/jakecashion/hacklanta"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Get the code on GitHub
+    <span class="sr-only"> (opens in new tab)</span>
+    <svg
+      aria-hidden="true"
+      class="h-3.5 w-3.5"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    </svg>
+  </a>
 </section>
