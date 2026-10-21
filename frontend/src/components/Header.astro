@@ -14,7 +14,7 @@ const links = [
 
 <header class="sticky top-0 z-10">
   <nav aria-label="Primary" class="navbar bg-base-200 px-4">
-    <a href="#" class="btn btn-ghost gap-2 text-xl"><Image src={logo} alt="" class="h-6 w-auto" />Tandem</a>
+    <a href="#home" class="btn btn-ghost gap-2 text-xl"><Image src={logo} alt="" loading="eager" class="h-6 w-auto" />Tandem</a>
     <ul class="ml-auto hidden gap-1 sm:flex">
       {links.map(([label, href]) => <li><a class="btn btn-ghost btn-sm" href={href}>{label}</a></li>)}
     </ul>
