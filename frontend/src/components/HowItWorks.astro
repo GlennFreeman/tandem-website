@@ -19,21 +19,21 @@ const parts = [
 ];
 ---
 
-<section id="how">
-  <h2 class="mb-8 text-3xl font-bold">How it works</h2>
-  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+<section id="how" aria-labelledby="how-title">
+  <h2 id="how-title" class="mb-8 text-3xl font-bold">How it works</h2>
+  <ol class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
     {
       parts.map(([title, text], i) => (
-        <div class="card border-base-300 border">
+        <li class="card border-base-300 border">
           <div class="card-body">
-            <span class="text-primary text-sm font-bold">0{i + 1}</span>
+            <span class="text-primary text-sm font-bold" aria-hidden="true">0{i + 1}</span>
             <h3 class="card-title">{title}</h3>
             <p class="text-sm">{text}</p>
           </div>
-        </div>
+        </li>
       ))
     }
-  </div>
+  </ol>
   <p class="mt-6">
     Laptops connect over <strong>Tailscale</strong>, so it works on any network
     with internet. If two edits touch the same field, the latest numbered edit

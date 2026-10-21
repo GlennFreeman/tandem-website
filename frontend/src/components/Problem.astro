@@ -1,5 +1,5 @@
-<section id="problem">
-  <h2 class="mb-8 text-3xl font-bold">Why we built it</h2>
+<section id="problem" aria-labelledby="problem-title">
+  <h2 id="problem-title" class="mb-8 text-3xl font-bold">Why we built it</h2>
   <div class="grid gap-8 md:grid-cols-2">
     <div class="space-y-4">
       <p>
@@ -7,18 +7,19 @@
         cities. Yet every pro editing tool treats the timeline as a one-person
         space.
       </p>
-      <blockquote class="border-primary border-l-4 pl-4 italic">
-        "It's not currently possible for more than one editor to make changes on
-        the same timeline." <span class="not-italic opacity-70"
-          >: Adobe staff, 2017. Still true.</span
-        >
-      </blockquote>
+      <figure class="border-primary border-l-4 pl-4">
+        <blockquote class="italic">
+          "It's not currently possible for more than one editor to make changes
+          on the same timeline."
+        </blockquote>
+        <figcaption class="opacity-70">Adobe staff, 2017. Still true.</figcaption>
+      </figure>
       <p>
         Writers got Google Docs. Designers got Figma. Developers got live pair
         programming. Film editors are still waiting for their turn.
       </p>
     </div>
-    <ul class="timeline timeline-vertical timeline-compact">
+    <ol class="timeline timeline-vertical timeline-compact">
       {
         [
           "Save the project file",
@@ -30,13 +31,13 @@
           <li>
             {i > 0 && <hr />}
             <div class="timeline-middle">
-              <div class="badge badge-error badge-xs" />
+              <div class="badge badge-error badge-xs" aria-hidden="true" />
             </div>
             <div class="timeline-end timeline-box">{s}</div>
             {i < a.length - 1 && <hr />}
           </li>
         ))
       }
-    </ul>
+    </ol>
   </div>
 </section>

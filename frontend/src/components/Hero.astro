@@ -3,7 +3,8 @@ import { Image } from "astro:assets";
 import tandem from "../assets/tandem logo crop.png";
 ---
 
-<header
+<section
+  aria-labelledby="hero-title"
   class="hero relative min-h-[70vh] overflow-hidden py-12 bg-linear-to-b from-base-200 to-base-100"
 >
   <Image
@@ -18,7 +19,7 @@ import tandem from "../assets/tandem logo crop.png";
       <div class="badge badge-primary mb-4">
         Hacklanta · Creative track · C-Day @ KSU
       </div>
-      <h1 class="text-5xl font-bold sm:text-6xl">
+      <h1 id="hero-title" class="text-5xl font-bold sm:text-6xl">
         Premiere Pro, <span class="text-primary">multiplayer</span>.
       </h1>
       <p class="py-6 text-lg">
@@ -35,4 +36,4 @@ import tandem from "../assets/tandem logo crop.png";
       </div>
     </div>
   </div>
-</header>
+</section>
